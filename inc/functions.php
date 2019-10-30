@@ -1,38 +1,38 @@
 <?php
-
 // $pages = array(
 // 	'witam' => 'Witamy',
 // 	'formularz' => 'Formularz',
-// 	'klasa' => 'Klasa'
+// 	'klasa' => 'Klasy'
 // );
 
-function get_menu($id){
-	global $db;
-	$ret = array();
+$ret = array(); // tablica asocjacyjna, która będzie przechowywała wyniki zapytań
+function get_menu($id) {
+	global $db,$ret;
 	db_query('SELECT * FROM menu', $ret);
 	//print_r($ret);
-	 foreach ($ret as $k => $t) {
-		echo'
-					<li class="nav-item">
-              <a class="nav-link" href="?id='.$t['plik'].'">'.$t['tytul'].'</a>
-          </li>
-				';
+ 	foreach ($ret as $k => $t) {
+		echo '
+<li class="nav-item">
+    <a class="nav-link" href="?id='.$t['plik'].'">'.$t['tytuł'].'</a>
+</li>
+		';
 	}
 }
-
-function get_page_title($id){
-	global $pages;
-	if (array_key_exists($id, $pages))
-		echo $pages[$id];
+function get_page_title($id) {
+	global $ret;
+	foreach ($ret as $k => $t) {
+		if($t['plik'] == $id){
+			echo $t['tytuł'];
+			return;
+		}
+	}
+	//tytuł domyslny
+	echo 'Aplikacja PHP';
+}
+function get_page_content($id) {
+	if (file_exists($id.'.html'))
+		include($id.'.html');
 	else
-		echo 'Aplikacja PHP';
+		include('404.html');
 }
-
-function get_page_content($id){
-if (file_exists($id.'.html'))
-	include($id.'.html');
-else
-	include('404.html');
-}
-
 ?>
