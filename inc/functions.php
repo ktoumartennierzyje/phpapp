@@ -13,7 +13,7 @@ function get_menu($id) {
  	foreach ($ret as $k => $t) {
 		echo '
 <li class="nav-item">
-    <a class="nav-link" href="?id='.$t['plik'].'">'.$t['tytuł'].'</a>
+    <a class="nav-link" href="?id='.$t['plik'].'">'.$t['tytul'].'</a>
 </li>
 		';
 	}
@@ -22,7 +22,7 @@ function get_page_title($id) {
 	global $ret;
 	foreach ($ret as $k => $t) {
 		if($t['plik'] == $id){
-			echo $t['tytuł'];
+			echo $t['tytul'];
 			return;
 		}
 	}
