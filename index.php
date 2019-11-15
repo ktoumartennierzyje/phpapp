@@ -20,4 +20,5 @@ if (isset($_GET['id']))
 else
 	$id='witam';
 include_once(DINC.'template.php');
+
 ?>
