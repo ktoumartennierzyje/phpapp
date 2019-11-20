@@ -1,13 +1,15 @@
+
 <?php
 // $pages = array(
 // 	'witam' => 'Witamy',
 // 	'formularz' => 'Formularz',
 // 	'klasa' => 'Klasy'
 // );
-
-$ret = array(); // tablica asocjacyjna, która będzie przechowywała wyniki zapytań
+// github.com/lo1cgsan/phpapp
+// tablica asocjcyjna, która będzie zawierała wyniki zapytań
+$ret = array();
 function get_menu($id) {
-	global $db,$ret;
+	global $db, $ret;
 	db_query('SELECT * FROM menu', $ret);
 	//print_r($ret);
  	foreach ($ret as $k => $t) {
@@ -21,12 +23,13 @@ function get_menu($id) {
 function get_page_title($id) {
 	global $ret;
 	foreach ($ret as $k => $t) {
-		if($t['plik'] == $id){
+		//echo $t['id']." ";
+		if ($t['plik'] == $id) {
 			echo $t['tytul'];
 			return;
 		}
 	}
-	//tytuł domyslny
+	// tytuł domyślny
 	echo 'Aplikacja PHP';
 }
 function get_page_content($id) {
@@ -35,7 +38,6 @@ function get_page_content($id) {
 	else
 		include('404.html');
 }
-
 function clrtxt(&$el, $maxdl=30) {
     if (is_array($el)) {
         return array_map('clrtxt', $el);
@@ -46,5 +48,11 @@ function clrtxt(&$el, $maxdl=30) {
         $el = htmlspecialchars($el, ENT_QUOTES);
         return $el;
     }
+}
+function get_koms() {
+	global $kom;
+	foreach ($kom as $k) {
+		echo "<p class=\"text-info\">$k</p>";
+	}
 }
 ?>

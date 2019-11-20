@@ -35,13 +35,17 @@ class User {
 
 	function is_login($login) {
 		$qstr='SELECT id FROM users WHERE login=\''.$login.'\' LIMIT 1';
-    if (db_query($qstr)) return true;
+		$ret = array();
+		db_query($qstr, $ret);
+    if (db_query($qstr, $ret)) return true;
     return false;
 	}
 
 	function is_email($email) {
 		$qstr='SELECT id FROM users WHERE email=\''.$email.'\' LIMIT 1';
-    if (db_query($qstr)) return true;
+		$ret = array();
+		db_query($qstr, $ret);
+    if (db_query($qstr, $ret)) return true;
     return false;
 	}
 	  function savtb() {//tab. asocjacyjna z kluczami: id#nick#haslo#email#datad

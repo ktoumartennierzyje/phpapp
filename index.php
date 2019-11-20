@@ -15,6 +15,7 @@ require_once(DINC.'db.php');
 require_once(DINC.'users.php');
 init_baza();
 init_tables();
+$user = new User();
 if (isset($_GET['id']))
 	$id=$_GET['id'];
 else
