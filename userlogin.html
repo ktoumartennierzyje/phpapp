@@ -1,37 +1,17 @@
-<?php
+<!-- <?php
 
 if (isset($_POST['login'])) {
-    global $db, $user, $kom;
+    global $user, $kom;
+
     foreach ($_POST as $k => $v) {
         ${$k} = clrtxt($v);
-        // print ${$k}."<br>";
     }
 
-    $ok = true;
-    if ($user->is_login($login)) {
-        $kom[] = "Podany login istnieje!";
-        $ok = false;
-    }
-
-    if ($user->is_email($email)) {
-        $kom[] = "Podany email istnieje!";
-        $ok = false;
-    }
-
-    if (strlen($haslo) < 8) {
-        $kom[] = "Za krótkie hasło!";
-        $ok = false;
-    }
-
-    if ($ok) {
-        $user->login = $login;
-        $user->email = $email;
-        $user->haslo = $haslo;
-        print_r($user->dane);
-    }
+    $user ->login($login, $haslo);
+    print_r($_SESSION);
 }
 
-?>
+?> -->
 
 <form action="?id=<?php echo $strona['id']; ?>" method="POST" name="dane" id="dane">
     <input type="hidden" name="id_user" value="10">

@@ -1,0 +1,79 @@
+[29-Nov-2019 09:37:13 Europe/Warsaw] PHP Fatal error:  Uncaught Error: Access to undeclared static property: Baza::$db in /home/lo1sand/public_html/phpapp/inc/db.php:10
+Stack trace:
+#0 /home/lo1sand/public_html/phpapp/index.php(17): Baza->__construct('db/baza.db')
+#1 {main}
+  thrown in /home/lo1sand/public_html/phpapp/inc/db.php on line 10
+[04-Dec-2019 09:06:02 Europe/Warsaw] PHP Fatal error:  Uncaught Error: Call to undefined function db_query() in /home/kl2ag1/public_html/phpapp/formularz.html:27
+Stack trace:
+#0 /home/kl2ag1/public_html/phpapp/inc/functions.php(41): include()
+#1 /home/kl2ag1/public_html/phpapp/inc/template.php(34): get_page_content(Array)
+#2 /home/kl2ag1/public_html/phpapp/index.php(27): include_once('/home/kl2ag1/pu...')
+#3 {main}
+  thrown in /home/kl2ag1/public_html/phpapp/formularz.html on line 27
+[04-Dec-2019 09:06:12 Europe/Warsaw] PHP Fatal error:  Uncaught Error: Call to undefined function db_query() in /home/kl2ag1/public_html/phpapp/formularz.html:27
+Stack trace:
+#0 /home/kl2ag1/public_html/phpapp/inc/functions.php(41): include()
+#1 /home/kl2ag1/public_html/phpapp/inc/template.php(34): get_page_content(Array)
+#2 /home/kl2ag1/public_html/phpapp/index.php(27): include_once('/home/kl2ag1/pu...')
+#3 {main}
+  thrown in /home/kl2ag1/public_html/phpapp/formularz.html on line 27
+[04-Dec-2019 09:06:19 Europe/Warsaw] PHP Fatal error:  Uncaught Error: Call to undefined function db_query() in /home/kl2ag1/public_html/phpapp/formularz.html:27
+Stack trace:
+#0 /home/kl2ag1/public_html/phpapp/inc/functions.php(41): include()
+#1 /home/kl2ag1/public_html/phpapp/inc/template.php(34): get_page_content(Array)
+#2 /home/kl2ag1/public_html/phpapp/index.php(27): include_once('/home/kl2ag1/pu...')
+#3 {main}
+  thrown in /home/kl2ag1/public_html/phpapp/formularz.html on line 27
+[04-Dec-2019 09:06:53 Europe/Warsaw] PHP Fatal error:  Uncaught Error: Call to undefined function db_query() in /home/kl2ag1/public_html/phpapp/formularz.html:27
+Stack trace:
+#0 /home/kl2ag1/public_html/phpapp/inc/functions.php(41): include()
+#1 /home/kl2ag1/public_html/phpapp/inc/template.php(34): get_page_content(Array)
+#2 /home/kl2ag1/public_html/phpapp/index.php(27): include_once('/home/kl2ag1/pu...')
+#3 {main}
+  thrown in /home/kl2ag1/public_html/phpapp/formularz.html on line 27
+[04-Dec-2019 09:23:38 Europe/Warsaw] PHP Parse error:  syntax error, unexpected '$t' (T_VARIABLE), expecting ',' or ';' in /home/kl2ag1/public_html/phpapp/formularz.html on line 31
+[04-Dec-2019 09:23:39 Europe/Warsaw] PHP Parse error:  syntax error, unexpected '$t' (T_VARIABLE), expecting ',' or ';' in /home/kl2ag1/public_html/phpapp/formularz.html on line 31
+[04-Dec-2019 09:23:40 Europe/Warsaw] PHP Parse error:  syntax error, unexpected '$t' (T_VARIABLE), expecting ',' or ';' in /home/kl2ag1/public_html/phpapp/formularz.html on line 31
+[04-Dec-2019 09:23:42 Europe/Warsaw] PHP Parse error:  syntax error, unexpected '$t' (T_VARIABLE), expecting ',' or ';' in /home/kl2ag1/public_html/phpapp/formularz.html on line 31
+[04-Dec-2019 09:23:59 Europe/Warsaw] PHP Parse error:  syntax error, unexpected '$t' (T_VARIABLE), expecting ',' or ';' in /home/kl2ag1/public_html/phpapp/formularz.html on line 31
+[04-Dec-2019 09:26:01 Europe/Warsaw] PHP Parse error:  syntax error, unexpected '$t' (T_VARIABLE), expecting ',' or ';' in /home/kl2ag1/public_html/phpapp/formularz.html on line 31
+[04-Dec-2019 09:27:54 Europe/Warsaw] PHP Parse error:  syntax error, unexpected '$strona' (T_VARIABLE), expecting ',' or ';' in /home/kl2ag1/public_html/phpapp/formularz.html on line 33
+[04-Dec-2019 09:29:42 Europe/Warsaw] PHP Notice:  Undefined variable: db_exec in /home/kl2ag1/public_html/phpapp/formularz.html on line 8
+[04-Dec-2019 09:29:42 Europe/Warsaw] PHP Fatal error:  Uncaught Error: Function name must be a string in /home/kl2ag1/public_html/phpapp/formularz.html:8
+Stack trace:
+#0 /home/kl2ag1/public_html/phpapp/inc/functions.php(41): include()
+#1 /home/kl2ag1/public_html/phpapp/inc/template.php(34): get_page_content(Array)
+#2 /home/kl2ag1/public_html/phpapp/index.php(27): include_once('/home/kl2ag1/pu...')
+#3 {main}
+  thrown in /home/kl2ag1/public_html/phpapp/formularz.html on line 8
+[06-Dec-2019 09:00:34 Europe/Warsaw] PHP Parse error:  syntax error, unexpected '%' in /home/kl2ag1/public_html/phpapp/formularz.html on line 39
+[06-Dec-2019 09:00:39 Europe/Warsaw] PHP Parse error:  syntax error, unexpected '%' in /home/kl2ag1/public_html/phpapp/formularz.html on line 39
+[06-Dec-2019 09:23:05 Europe/Warsaw] PHP Parse error:  syntax error, unexpected '}' in /home/kl2ag1/public_html/phpapp/inc/users.php on line 10
+[06-Dec-2019 09:23:26 Europe/Warsaw] PHP Parse error:  syntax error, unexpected '}' in /home/kl2ag1/public_html/phpapp/inc/users.php on line 10
+[06-Dec-2019 09:23:28 Europe/Warsaw] PHP Parse error:  syntax error, unexpected '}' in /home/kl2ag1/public_html/phpapp/inc/users.php on line 10
+[06-Dec-2019 09:24:19 Europe/Warsaw] PHP Warning:  session_start(): open(sesje/sess_vlmltcj7bqh3rm93umagtaa7rj, O_RDWR) failed: Brak dostępu (13) in /home/kl2ag1/public_html/phpapp/inc/users.php on line 10
+[06-Dec-2019 09:24:19 Europe/Warsaw] PHP Warning:  session_start(): Failed to read session data: files (path: sesje) in /home/kl2ag1/public_html/phpapp/inc/users.php on line 10
+[06-Dec-2019 09:24:23 Europe/Warsaw] PHP Warning:  session_start(): open(sesje/sess_vlmltcj7bqh3rm93umagtaa7rj, O_RDWR) failed: Brak dostępu (13) in /home/kl2ag1/public_html/phpapp/inc/users.php on line 10
+[06-Dec-2019 09:24:23 Europe/Warsaw] PHP Warning:  session_start(): Failed to read session data: files (path: sesje) in /home/kl2ag1/public_html/phpapp/inc/users.php on line 10
+[06-Dec-2019 09:24:23 Europe/Warsaw] PHP Warning:  session_start(): open(sesje/sess_vlmltcj7bqh3rm93umagtaa7rj, O_RDWR) failed: Brak dostępu (13) in /home/kl2ag1/public_html/phpapp/inc/users.php on line 10
+[06-Dec-2019 09:24:23 Europe/Warsaw] PHP Warning:  session_start(): Failed to read session data: files (path: sesje) in /home/kl2ag1/public_html/phpapp/inc/users.php on line 10
+[06-Dec-2019 09:25:04 Europe/Warsaw] PHP Warning:  session_start(): open(sesje/sess_vlmltcj7bqh3rm93umagtaa7rj, O_RDWR) failed: Brak dostępu (13) in /home/kl2ag1/public_html/phpapp/inc/users.php on line 10
+[06-Dec-2019 09:25:04 Europe/Warsaw] PHP Warning:  session_start(): Failed to read session data: files (path: sesje) in /home/kl2ag1/public_html/phpapp/inc/users.php on line 10
+[06-Dec-2019 09:36:28 Europe/Warsaw] PHP Parse error:  syntax error, unexpected '}' in /home/kl2ag1/public_html/phpapp/userlogin.html on line 12
+[06-Dec-2019 09:36:28 Europe/Warsaw] PHP Parse error:  syntax error, unexpected '}' in /home/kl2ag1/public_html/phpapp/userlogin.html on line 12
+[06-Dec-2019 09:37:06 Europe/Warsaw] PHP Fatal error:  Uncaught Error: Call to undefined function db_query() in /home/kl2ag1/public_html/phpapp/inc/users.php:47
+Stack trace:
+#0 /home/kl2ag1/public_html/phpapp/userform.html(11): User->is_login('rozs')
+#1 /home/kl2ag1/public_html/phpapp/inc/functions.php(41): include('/home/kl2ag1/pu...')
+#2 /home/kl2ag1/public_html/phpapp/inc/template.php(34): get_page_content(Array)
+#3 /home/kl2ag1/public_html/phpapp/index.php(27): include_once('/home/kl2ag1/pu...')
+#4 {main}
+  thrown in /home/kl2ag1/public_html/phpapp/inc/users.php on line 47
+[11-Dec-2019 08:58:25 Europe/Warsaw] PHP Fatal error:  Uncaught Error: Call to undefined function db_query() in /home/kl2ag1/public_html/phpapp/inc/users.php:47
+Stack trace:
+#0 /home/kl2ag1/public_html/phpapp/userform.html(11): User->is_login('hjhfgvghvg')
+#1 /home/kl2ag1/public_html/phpapp/inc/functions.php(41): include('/home/kl2ag1/pu...')
+#2 /home/kl2ag1/public_html/phpapp/inc/template.php(34): get_page_content(Array)
+#3 /home/kl2ag1/public_html/phpapp/index.php(27): include_once('/home/kl2ag1/pu...')
+#4 {main}
+  thrown in /home/kl2ag1/public_html/phpapp/inc/users.php on line 47

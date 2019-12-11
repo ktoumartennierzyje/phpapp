@@ -1,35 +1,49 @@
 <?php
-function init_baza() {
-	global $db, $dbfile, $kom;
-	if (!file_exists($dbfile)) $kom[] = 'Brak pliku bazy. Tworzę nowy.';
-	$db = new PDO("sqlite:$dbfile");
-	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-}
-function init_tables() {
-	global $db;
-	if (file_exists(DBASE.'baza.sql')) {
-		$sql = file_get_contents(DBASE.'baza.sql', 'r');
-		$q = "SELECT name FROM sqlite_master WHERE type='table' AND name='menu'";
-		$ret = array();
-		db_query($q, $ret);
-		if(empty($ret)){
-			$db -> exec($sql);
-			$kom[] = "Utworzono tabele!";
+
+class Baza {
+	static private $db = null;
+	static public $ret = array();
+	static public $kom = array();
+
+	public function __construct($dbfile) {
+		if (!file_exists($dbfile)) self::$kom[] = 'Brak pliku bazy. Tworzę nowy.';
+		self::$db = new PDO("sqlite:$dbfile");
+		self::$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		self::init_tables();
+	}
+
+
+	function init_tables() {
+		if (file_exists(DBASE.'baza.sql')) {
+			$q = "SELECT name FROM sqlite_master WHERE type='table' AND name='menu'";
+			self::db_query($q);
+			if (empty(self::$ret)) {
+				$sql = file_get_contents(DBASE.'baza.sql', 'r');
+				self::db_exec($sql);
+				self::$kom[] = "Utworzono tabele!";
+			}
 		}
 	}
-}
-function db_query($q, &$ret) {
-	global $db;
-	$r = null;
-	try {
-		$r = $db->query($q);
-	} catch(PDOException $e) {
-		echo ($e->getMessage());
+
+
+	static public function db_query($q) {
+		try {
+			self::$ret = self::$db->query($q, PDO::FETCH_ASSOC)->fetchAll();
+			self::$kom[] = 'Wykonuję: '.$q.'<br>';
+		} catch(PDOException $e) {
+			echo ($e->getMessage());
+		}
 	}
-	if ($r) {
-		$ret = $r->fetchAll(PDO::FETCH_ASSOC);
-		return true;
+
+	static public function db_exec($q) {
+		try {
+			self::$db->exec($q);
+			self::$kom[] = 'Wykonuję: '.$q.'<br>';
+		} catch(PDOException $e) {
+			echo ($e->getMessage());
+		}
 	}
-	return false;
+
 }
+
 ?>

@@ -10,33 +10,34 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-sm bg-light ">
+    <nav class="navbar navbar-expand-sm bg-light">
         <a class="navbar-brand" href="http://lo1.sandomierz.pl">I LO CG</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav">
-<?php get_menu($id); ?>
+<?php get_menu($id, $strona); ?>
             </ul>
         </div>
     </nav>
 
 <div class="jumbotron">
-  <h1><?php get_page_title($id); ?></h1>
+  <h1><?php get_page_title($strona); ?></h1>
   <p>Pierwsza aplikacja w PHP</p>
 </div>
 
 <div class="container">
-    <div class="row">
-        <div class="col">
-        <?php
-            get_koms();
-            get_page_content($id);
-        ?>
-        </div>
-        <div class="col"></div>
-    </div>
+	<div class="row">
+		<div class="col">
+		<?php
+			get_page_content($strona);
+            get_koms(Baza::$kom);
+            get_koms($kom);
+		?>
+		</div>
+		<div class="col"></div>
+	</div>
 </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
